@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="75">
+	<author>Executor of Modding, n0tr3adY</author>
+	<version>1.0.0.0</version>
+	<title>
+		<en>Mouse Driving</en>
+	</title>
+	<description>
+		<en>
+			<![CDATA[
+This mod will provide you with the ability to use the mouse to drive vehicles.
+Enable it by pressing CTRL + SHIFT + M, move the mouse up and down to accelerate/brake and from right to left to steer.
+If you need to disable mouse control temporarily to move the camera you can hold down CTRL and the control will temporarily switch to the camera.
+Both input key bindings can be customized from the game menu.
+If you want to further customize your driving experience, press RSHIFT + R to open the mod's settings panel.
+]]>
+		</en>
+		<de>
+			<![CDATA[
+Diese mod bietet Ihnen die Möglichkeit, die Maus zu verwenden, um Fahrzeuge zu fahren.
+Aktivieren Sie es durch Drücken von STRG + SHIFT + M, bewegen Sie die Maus nach oben und unten, um zu beschleunigen/bremsen und von rechts nach links zu lenken.
+Wenn Sie die Maussteuerung vorübergehend deaktivieren müssen, um die Kamera zu bewegen, können Sie die STRG-Taste gedrückt halten und die Steuerung wird vorübergehend auf die Kamera umgeschaltet.
+Beide Eingabetastenbelegungen können über das Spielmenü angepasst werden.
+Wenn Sie Ihr Fahrerlebnis weiter anpassen möchten, drücken Sie RSHIFT + R, um das Einstellungsfeld des Mods zu öffnen.
+]]>
+		</de>
+		<fr>
+			<![CDATA[
+Ce mod vous permettra d'utiliser la souris pour conduire des véhicules.
+Activez-le en appuyant sur CTRL + SHIFT + M, déplacez la souris de haut en bas pour accélérer/freiner et de droite à gauche pour diriger.
+Si vous devez désactiver temporairement le contrôle de la souris pour déplacer la caméra, vous pouvez maintenir la touche CTRL enfoncée et la commande passera temporairement à la caméra.
+Les deux combinaisons de touches de saisie peuvent être personnalisées à partir du menu du jeu.
+Si vous souhaitez personnaliser davantage votre expérience de conduite, appuyez sur RSHIFT + R pour ouvrir le panneau des paramètres du mod.
+]]>
+		</fr>
+	</description>
+	
+	<multiplayer supported="true" />
+	<iconFilename>icon.png</iconFilename>
+
+	<specializations>
+		<specialization name="mouseDriving" className="MouseDriving" filename="MouseDriving.lua" />
+	</specializations>
+
+	<extraSourceFiles>
+		<sourceFile filename="rmod/Main.lua" />
+		<sourceFile filename="utility/Main.lua" />
+		<sourceFile filename="rset/Main.lua" />
+		<sourceFile filename="hud/Main.lua" />
+		<sourceFile filename="mouseDrivingMain.lua" />
+		<sourceFile filename="axisHud.lua" />
+	</extraSourceFiles>
+
+	<actions>
+		<action name="MD_TOGGLE" axisType="HALF" />
+		<action name="MD_PAUSE" axisType="HALF" />
+		<!--<action name="MD_AXIS_UPDOWN" category="VEHICLE" axisType="FULL" ignoreComboMask="true" />
+		<action name="MD_AXIS_LEFTRIGHT" category="VEHICLE" axisType="FULL" ignoreComboMask="true" />-->
+	</actions>
+
+	<inputBinding>
+		<actionBinding action="MD_TOGGLE">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_lshift KEY_m" />
+		</actionBinding>
+		<actionBinding action="MD_PAUSE">
+			<binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl" />
+		</actionBinding>
+		<!--<actionBinding action="MD_AXIS_UPDOWN">
+			<binding device="KB_MOUSE_DEFAULT" input="AXIS_Y+" axisComponent="+" neutralInput="0" index="3" />
+			<binding device="KB_MOUSE_DEFAULT" input="AXIS_Y-" axisComponent="-" neutralInput="0" index="3" />
+		</actionBinding>
+		<actionBinding action="MD_AXIS_LEFTRIGHT">
+			<binding device="KB_MOUSE_DEFAULT" input="AXIS_X+" axisComponent="+" neutralInput="0" index="3" />
+			<binding device="KB_MOUSE_DEFAULT" input="AXIS_X-" axisComponent="-" neutralInput="0" index="3" />
+		</actionBinding>-->
+	</inputBinding>
+
+	<l10n>
+		<text name="input_MD_TOGGLE">
+			<en>Toggle mouse driving</en>
+			<de>Maussteuerung umschalten</de>
+			<br>Alternar mouse driving</br>
+		</text>
+		<text name="input_MD_PAUSE">
+			<en>Pause mouse driving (keep pressed)</en>
+			<de>Mausfahren anhalten (gedrückt halten)</de>
+			<br>Pausar mouse driving (manter pressionado)</br>
+		</text>
+		<!--<text name="input_MD_AXIS_UPDOWN_1">
+			<en>Mouse driving, please don't change or touch</en>
+			<de>Fahren mit der Maus, bitte nicht ändern oder berühren</de>
+		</text>
+		<text name="input_MD_AXIS_UPDOWN_2">
+			<en>Mouse driving, please don't change or touch</en>
+			<de>Fahren mit der Maus, bitte nicht ändern oder berühren</de>
+		</text>
+		<text name="input_MD_AXIS_LEFTRIGHT_1">
+			<en>Mouse driving, please don't change or touch</en>
+			<de>Fahren mit der Maus, bitte nicht ändern oder berühren</de>
+		</text>
+		<text name="input_MD_AXIS_LEFTRIGHT_2">
+			<en>Mouse driving, please don't change or touch</en>
+			<de>Fahren mit der Maus, bitte nicht ändern oder berühren</de>
+		</text>-->
+		<text name="md_mod_settings_title">
+			<en>Mouse Driving</en>
+			<br>Mouse Driving</br>
+		</text>
+		<text name="md_setting_throttle_enabled">
+			<en>Throttle enabled</en>
+			<de>Regulierung aktiviert</de>
+			<br>Aceleração ativada</br>
+		</text>
+		<text name="md_setting_throttle_enabled_tooltip">
+			<en>Whether to enable or not the throttle input.</en>
+			<de>Gibt an, ob die Drosseleingabe aktiviert werden soll oder nicht.</de>
+			<br>Ativar ou não a entrada de aceleração.</br>
+		</text>
+		<text name="md_setting_throttle_deadZone">
+			<en>Throttle deadzone</en>
+			<de>Drosselklappenbereich</de>
+			<br>Zona morta da aceleração</br>
+		</text>
+		<text name="md_setting_throttle_deadZone_tooltip">
+			<en>Adjust the throttle axis deadzone.</en>
+			<de>Passen Sie die Deadzone für die Drosselachse an.</de>
+			<br>Ajustar a zona morta do eixo da aceleração.</br>
+		</text>
+		<text name="md_setting_throttle_sensitivity">
+			<en>Throttle sensitivity</en>
+			<de>Drosselempfindlichkeit</de>
+			<br>Sensibilidade da aceleração</br>
+		</text>
+		<text name="md_setting_throttle_sensitivity_tooltip">
+			<en>Adjust the throttle axis sensitivity.</en>
+			<de>Die Empfindlichkeit der Drosselklappenachse anpassen.</de>
+			<br>Ajustar a sensibilidade do eixo de aceleração.</br>
+		</text>
+		<text name="md_setting_throttle_invert">
+			<en>Invert throttle</en>
+			<de>Drosselklappendrossel</de>
+			<br>Inverter aceleração</br>
+		</text>
+		<text name="md_setting_throttle_invert_tooltip">
+			<en>Whether to invert or not the throttle input axis.</en>
+			<de>Gibt an, ob die Drosseleingangsachse invertiert werden soll oder nicht.</de>
+			<br>Inverter ou não a entrada do eixo de aceleração.</br>
+		</text>
+		<text name="md_setting_steer_enabled">
+			<en>Steer enabled</en>
+			<de>Steuern aktiviert</de>
+			<br>Direção ativada</br>
+		</text>
+		<text name="md_setting_steer_enabled_tooltip">
+			<en>Whether to enable or not the steer input.</en>
+			<de>Gibt an, ob der Steuereingang aktiviert werden soll oder nicht.</de>
+			<br>Ativar ou não a entrada de direção.</br>
+		</text>
+		<text name="md_setting_steer_deadZone">
+			<en>Steer deadzone</en>
+			<de>Steuern-Deadzone</de>
+			<br>Zona morta da direção</br>
+		</text>
+		<text name="md_setting_steer_deadZone_tooltip">
+			<en>Adjust the steer axis deadzone.</en>
+			<de>Passen Sie die Totzone der Lenkachse an.</de>
+			<br>Ajustar a zona morta do eixo de direção.</br>
+		</text>
+		<text name="md_setting_steer_sensitivity">
+			<en>Steer sensitivity</en>
+			<de>Lenkempfindlichkeit</de>
+			<br>Sensibilidade de direção</br>
+		</text>
+		<text name="md_setting_steer_sensitivity_tooltip">
+			<en>Adjust the steer axis sensitivity.</en>
+			<de>Passen Sie die Empfindlichkeit der Lenkachse an.</de>
+			<br>Ajustar a sensibilidade do eixo de direção.</br>
+		</text>
+		<text name="md_setting_hud">
+			<en>Axes HUD</en>
+			<de>Achsen HUD</de>
+			<br>Eixos HUD</br>
+		</text>
+		<text name="md_setting_hud_tooltip">
+			<en>Whether to show or not the input axes HUD.</en>
+			<de>Gibt an, ob die Eingabeachsen HUD angezeigt werden sollen oder nicht.</de>
+			<br>Mostrar ou não a entrada de eixos HUD.</br>
+		</text>
+	</l10n>
+</modDesc>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI name="itWillBeReplacedByScript" onCreate="onCreate">
+    <GuiElement type="empty" profile="uiInGameMenuFrame">
+        <!-- Static page header -->
+        <GuiElement type="empty" profile="ingameMenuFrameHeaderPanel" position="0px 0px">
+            <GuiElement type="bitmap" profile="ingameMenuGeneralSettingsHeaderIcon" position="0px 0px" id="headerIcon" />
+            <GuiElement type="text" profile="ingameMenuFrameHeaderText" position="0px 0px" text="" id="headerText" />
+        </GuiElement>
+
+        <GuiElement type="empty" profile="ingameMenuSettingsBox" position="0px -100px" size="350px 600px" id="settingsContainer" positionOrigin="bottomLeft">
+            <GuiElement type="boxLayout" profile="ingameMenuSettingsLayout" position="0px 0px" size="350px 600px" numFlows="2" lateralFlowSize="20">
+                <!-- <GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" onClick="onOptionChange" onCreate="onCreateElement" id="cloneElement" toolTipElementId="ingameMenuHelpBoxText"> -->
+                    <!-- <GuiElement type="button" profile="multiTextOptionLeft" /> -->
+                    <!-- <GuiElement type="button" profile="multiTextOptionRight" /> -->
+                    <!-- <GuiElement type="text" profile="multiTextOptionText" /> -->
+                    <!-- <GuiElement type="text" profile="multiTextOptionTitle" /> -->
+                    <!-- <GuiElement type="bitmap" profile="multiTextOptionBg" /> -->
+                <!-- </GuiElement> -->
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement1" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement2" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement3" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement4" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement5" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement6" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement7" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+				<GuiElement type="multiTextOption" profile="multiTextOptionSettings" size="315px 48px" margin="5px 30px 5px 30px" onClick="onOptionChange" onCreate="onCreateElement" id="settingElement8" toolTipElementId="ingameMenuHelpBoxText">
+                    <GuiElement type="button" profile="multiTextOptionLeft" />
+                    <GuiElement type="button" profile="multiTextOptionRight" />
+                    <GuiElement type="text" profile="multiTextOptionText" />
+                    <GuiElement type="text" profile="multiTextOptionTitle" />
+                    <GuiElement type="bitmap" profile="multiTextOptionBg" />
+                </GuiElement>
+            </GuiElement>
+        </GuiElement>
+
+        <GuiElement type="bitmap" profile="ingameMenuHelpRowBg" position="210px 1px" id="ingameMenuHelpBox" visible="false">
+            <GuiElement type="bitmap" profile="ingameMenuHelpRowIcon" />
+            <GuiElement type="text" profile="ingameMenuHelpRowText" id="ingameMenuHelpBoxText" onTextChanged="onIngameMenuHelpTextChanged" />
+        </GuiElement>
+    </GuiElement>
+</GUI>
